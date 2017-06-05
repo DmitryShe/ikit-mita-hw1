@@ -25,7 +25,18 @@ namespace Domain
 
         public int Age { get; }
 
-        public string Name { get { return name; } set { name = value; } }      
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                if (name == null)
+                    name = value;
+            }
+        }      
         
         public string Color
         {
